@@ -1,11 +1,4 @@
-// async.js
-async function fetchData() {
-  return 'peanut butter';
-}
-module.exports = fetchData;
-
-// __tests__/async.test.js
-const fetchData = require('../async');
+import fetchData from '../fetchData';
 
 test('the data is peanut butter', async () => {
   const data = await fetchData();
