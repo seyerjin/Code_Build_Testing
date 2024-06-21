@@ -2,12 +2,13 @@
   "name": "noteapp",
   "version": "1.0.0",
   "description": "",
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js",
     "test": "jest --coverage",
-    "lint": "eslint ."
+    "lint": "eslint . --config eslint.config.js"
   },
   "author": "",
   "license": "ISC",
