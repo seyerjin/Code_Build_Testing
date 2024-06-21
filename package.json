@@ -7,8 +7,6 @@
     "start": "node index.js",
     "dev": "nodemon index.js",
     "test": "jest --coverage"
-}
-
   },
   "author": "",
   "license": "ISC",
