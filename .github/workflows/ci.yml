@@ -8,13 +8,13 @@ on:
   workflow_dispatch:
 
 jobs:
-  checkout:
+  build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
 
   setup-node:
-    needs: checkout
+    needs: build
     uses: ./.github/workflows/setup-node.yml
 
   lint:
