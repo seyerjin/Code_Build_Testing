@@ -1,21 +1,16 @@
-// object.js
-function createUser(name, age) {
-  return {
-    name: name,
-    age: age,
-  };
+// sum.js
+function sum(a, b) {
+  return a + b;
 }
-module.exports = createUser;
+module.exports = sum;
 
-// __tests__/object.test.js
-const createUser = require('../object');
+// __tests__/sum.test.js
+const sum = require('../sum');
 
-test('creates a user object with name and age', () => {
-  const user = createUser('John', 30);
-  expect(user).toEqual({ name: 'John', age: 30 });
+test('adds 1 + 2 to equal 3', () => {
+  expect(sum(1, 2)).toBe(3);
 });
 
-test('creates a user object with different name and age', () => {
-  const user = createUser('Jane', 25);
-  expect(user).toEqual({ name: 'Jane', age: 25 });
+test('adds -1 + 2 to equal 1', () => {
+  expect(sum(-1, 2)).toBe(1);
 });
