@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js",
-    "test": "jest --coverage"
+    "test": "jest --coverage",
+    "lint": "eslint ."
   },
   "author": "",
   "license": "ISC",
@@ -14,9 +15,7 @@
     "express": "^4.17.3"
   },
   "devDependencies": {
-    "@eslint/js": "^9.5.0",
     "eslint": "^9.5.0",
-    "globals": "^15.6.0",
     "jest": "^29.7.0",
     "nodemon": "^2.0.15"
   }
