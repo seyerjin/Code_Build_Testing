@@ -1,0 +1,10 @@
+name: Run ESLint
+
+on: [workflow_call]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run ESLint
+        run: npm run lint
