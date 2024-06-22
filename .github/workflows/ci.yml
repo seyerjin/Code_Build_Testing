@@ -1,4 +1,4 @@
-name: workflow
+name: Main workflow
 
 on:
   push:
@@ -11,7 +11,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v3
 
   setup-node:
     needs: build
@@ -21,12 +21,16 @@ jobs:
     needs: setup-node
     uses: ./.github/workflows/lint.yml
 
-  sonarcloud:
+  test:
     needs: lint
+    uses: ./.github/workflows/test.yml
+
+  sonarcloud:
+    needs: test
     uses: ./.github/workflows/sonarcloud.yml
     secrets: inherit
 
   docker:
-    needs: [setup-node, lint, sonarcloud]
+    needs: [setup-node, lint, test, sonarcloud]
     uses: ./.github/workflows/docker.yml
     secrets: inherit
