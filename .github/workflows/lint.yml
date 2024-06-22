@@ -1,9 +1,9 @@
-name: Run ESLint
+name: Lint and Test
 
 on: [workflow_call]
 
 jobs:
-  lint:
+  lint_and_test:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code

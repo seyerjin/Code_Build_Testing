@@ -17,15 +17,16 @@ jobs:
     needs: build
     uses: ./.github/workflows/setup-node.yml
 
-  lint:
+  lint_and_test:
     needs: setup-node
-    uses: ./.github/workflows/lint.yml
+    uses: ./.github/workflows/lint_and_test.yml
 
   sonarcloud:
+    needs: lint_and_test
     uses: ./.github/workflows/sonarcloud.yml
     secrets: inherit
 
   docker:
-    needs: [setup-node, lint, sonarcloud]
+    needs: [setup-node, lint_and_test, sonarcloud]
     uses: ./.github/workflows/docker.yml
     secrets: inherit
