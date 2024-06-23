@@ -2,7 +2,7 @@
   "name": "noteapp",
   "version": "1.0.0",
   "description": "",
-  "type": "module",
+  "type": "commonjs",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
@@ -13,19 +13,19 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.3",
+    "express": "^4.19.2",
     "glob": "^9.3.5"
   },
   "devDependencies": {
-    "@eslint/js": "^9.5.0",
-    "eslint": "^9.5.0",
-    "jest": "^29.7.0",
-    "nodemon": "^2.0.15",
-    "lru-cache": "^7.14.1",
-    "globals": "^14.0.0",
     "@babel/core": "^7.15.0",
     "@babel/preset-env": "^7.15.0",
-    "babel-jest": "^27.0.6"
+    "@eslint/js": "^9.5.0",
+    "babel-jest": "^27.0.6",
+    "eslint": "^9.5.0",
+    "globals": "^14.0.0",
+    "jest": "^29.7.0",
+    "lru-cache": "^7.14.1",
+    "nodemon": "^2.0.15"
   },
   "jest": {
     "transform": {
